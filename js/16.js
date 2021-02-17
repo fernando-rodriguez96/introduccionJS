@@ -1,18 +1,31 @@
-//Unir dos objetos con el Spread Operator
+//Arreglos o arrays
 
-const producto = {
-    nombre_producto: 'Monitor 20 Pulgadas',
-    precio: 200,
-    disponible: true
-}
+const numeros = [1,2,3,4,5,6,7,8,9,10];
 
-const medidas = {
-    peso: '1kg',
-    medida: '1m'
-}
+console.table(numeros);
 
-//Spread Operator
-const nuevo_producto = {...producto, ...medidas};
+//Con el constructor
+const meses = new Array['enero','febrero','marzo','abril'];
+console.table(meses);
 
-console.log(producto);
-console.log(nuevo_producto);
+//En los arreglos podemos agregar todo tipo de datos (incluso otros arreglos y objetos)
+const arreglo = ['Hola',18,true,'si',null,{nombre:'fernando', trabajo:'desarrollador'},[1,2,3,4]];
+
+console.log(arreglo);
+
+//Acceder a los valores de un arreglo (mediante indice)
+
+console.log(numeros[4]);
+console.log(numeros[2]);
+
+//Conocer la extension de un arreglo
+console.log(meses.length);
+
+//Listar
+numeros.forEach( numero => {
+    console.log(numero);
+})
+
+meses.forEach(mes => {
+    console.log(mes);    
+});

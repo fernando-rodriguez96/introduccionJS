@@ -1,6 +1,4 @@
-//Metodos de Objetos
-
-"use strict";//Modo estricto
+//Unir dos objetos con el Spread Operator
 
 const producto = {
     nombre_producto: 'Monitor 20 Pulgadas',
@@ -8,12 +6,13 @@ const producto = {
     disponible: true
 }
 
-Object.freeze(producto); //No permite al objeto agregar nuevas propiedades o nodificaciones
+const medidas = {
+    peso: '1kg',
+    medida: '1m'
+}
 
-Object.seal(producto); //No permite al objeto eliminar, agregar pero si modificar las propiedades existentes
-
-producto.imagen = 'imagen.png';
-
-console.log(Object.isFrozen(producto));//Permite saber si un objeto esta congetado
+//Spread Operator
+const nuevo_producto = {...producto, ...medidas};
 
 console.log(producto);
+console.log(nuevo_producto);
