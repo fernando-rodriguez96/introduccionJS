@@ -84,8 +84,11 @@ productos.imagen = 'foto.png';
 delete productos.imagen;
 
 //Aplicado destructuring a los objetos
+/*Extrae el valor y crea la variable al mismo tiempo de un objeto*/
 const {precio} = productos;
 const {nombre_producto} = productos;
+
+//const {precio, nombre_producto} = productos;
 
 //Metodos de objetos
 Object.freeze(productos); //No permite modificar ni agregar nuevas propiedades al objeto
